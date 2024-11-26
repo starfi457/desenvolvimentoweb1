@@ -1,17 +1,14 @@
 <?php
-
 $formulario = array(
     "id" => "formCadastro",
     "tipo_submit" => "POST",
-    "url_submit" => "cadastro.php",
+    "url_submit" => "tabela.php",
     "itens" => array(
         "nome" => array("tipo" => "text", "id" => "nome", "label" => "Nome", "placeholder" => "Informe seu nome."),
         "idade" => array("tipo" => "number", "id" => "idade", "label" => "Idade", "placeholder" => "Informe sua idade.", "funcao_validacao" => "validaIdade"),
-        "sexo" => array("tipo" => "radio", "id" => "sexo", "label" => "Sexo", "opcoes" => array("M" => "Masculino", "F" => "Feminino", "O" => "Outros")),
         "cidade_nascimento" => array("tipo" => "text", "id" => "cidade", "label" => "Cidade de Nasc.", "placeholder" => "Informe a cidade que você nasceu."),
-        "estado_nascimento" => array("tipo" => "select", "id" => "estado_nascimento", "label" => "Estado de Nasc.", "opcoes" => array("RJ" => "Rio de Janeiro", "SP" => "São Paulo", "ES" => "Espírito Santo", "MG" => "Minas Gerais", "O" => "Outros")),
-        "cpf" => array("tipo" => "number", "id" => "cpf", "label" => "CPF", "placeholder" => "Informe seu CPF.", "funcao_validacao" => "validaCpf"),
-        "botao_enviar" => array("tipo" => "submit", "id" => "enviar", "label" => "Enviar"),
+        "estado_nascimento" => array("tipo" => "select", "id" => "estado_nascimento", "label" => "Estado de Nasc.", "opcoes" => array("RJ" => "Rio de Janeiro", "SP" => "São Paulo", "ES" => "Espírito Santo", "MG" => "Minas Gerais", "GO" => "Goiás","MS"=>"Mato Grosso do Sul","MT"=>"Mato Grosso","DF"=>"Distrito Federal","RO"=>"Rondonia","AC"=>"Acre","AM"=>"Amazonas","RR"=>"Roraima","AP"=>"Amapá","PA"=>"Pará","TO"=>"Tocantins","MA"=>"Maranhão","PI"=>"Piaui","CE"=>"Ceará","RN"=>"Rio Grande do Norte","PB"=>"Paraíba","PE"=>"Pernambuco","AL"=>"Alagoas","SE"=>"Sergipe","BA"=>"Bahia","PR"=>"Paraná","SC"=>"Santa Catarina","RS"=>"Rio Grande do sul")),
+        "botao_enviar" => array("tipo" => "submit", "id" => "Filtrar", "label" => "Filtrar"),
         "botao_limpar_form" => array("tipo" => "reset", "id" => "reset", "label" => "Limpar Formulário"),
     )
 );
@@ -19,7 +16,7 @@ $formulario = array(
 
 function criarFormulario($formulario)
 {
-    echo "<form action='" . $formulario["url_submit"] . "  method='" . $formulario["tipo_submit"] . "'  id='" . $formulario["id"] . "'>\n";
+    echo "<form action='" . $formulario["url_submit"] . "'  method='" . $formulario["tipo_submit"] . "'  id='" . $formulario["id"] . "'>\n";
     foreach ($formulario["itens"] as $chave => $valor) {
         criaCampo($chave, $valor);
     }
@@ -92,3 +89,4 @@ echo "<title>Criação automática de Formulário</title>\n";
 echo "</head>\n<body>\n";
 echo criarFormulario($formulario);
 echo"\n</body>\n</html>";
+?>
