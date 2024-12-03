@@ -1,3 +1,4 @@
+<?
 $formulario = array(
     "id" => "formCadastro",
     "tipo_submit" => "POST",
@@ -91,3 +92,4 @@ echo "<title>Criação automática de Formulário</title>\n";
 echo "</head>\n<body>\n";
 echo criarFormulario($formulario);
 echo"\n</body>\n</html>";
+?>
