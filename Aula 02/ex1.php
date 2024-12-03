@@ -8,10 +8,7 @@ $formulario = array(
         "nome" => array("tipo" => "text", "id" => "nome", "label" => "Nome", "placeholder" => "Informe seu nome."),
         "idade" => array("tipo" => "number", "id" => "idade", "label" => "Idade", "placeholder" => "Informe sua idade.", "funcao_validacao" => "validaIdade"),
         "sexo" => array("tipo" => "radio", "id" => "sexo", "label" => "Sexo", "opcoes" => array("M" => "Masculino", "F" => "Feminino", "O" => "Outros")),
-<<<<<<< HEAD
-=======
         "esporte_preferido" => array("tipo" => "checkbox", "id" => "esporte_preferido", "label" => "Esporte Pref.", "opcoes" => array("F" => "Futebol", "V" => "Vôlei", "N" => "Natação", "O" => "Outros"), "obrigatorio" => false),
->>>>>>> 494fb744c1828b5814137a85423b4b12dda962df
         "cidade_nascimento" => array("tipo" => "text", "id" => "cidade", "label" => "Cidade de Nasc.", "placeholder" => "Informe a cidade que você nasceu."),
         "estado_nascimento" => array("tipo" => "select", "id" => "estado_nascimento", "label" => "Estado de Nasc.", "opcoes" => array("RJ" => "Rio de Janeiro", "SP" => "São Paulo", "ES" => "Espírito Santo", "MG" => "Minas Gerais", "O" => "Outros")),
         "cpf" => array("tipo" => "number", "id" => "cpf", "label" => "CPF", "placeholder" => "Informe seu CPF.", "funcao_validacao" => "validaCpf"),
@@ -95,8 +92,5 @@ echo "<html lang='pt-BR'>\n<head>\n<meta charset='UTF-8'>\n<meta name='viewport'
 echo "<title>Criação automática de Formulário</title>\n";
 echo "</head>\n<body>\n";
 echo criarFormulario($formulario);
-<<<<<<< HEAD
 echo"\n</body>\n</html>";
-=======
-echo"\n</body>\n</html>";
->>>>>>> 494fb744c1828b5814137a85423b4b12dda962df
+?>
