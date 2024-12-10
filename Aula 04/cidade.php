@@ -28,7 +28,12 @@ $cidadesEstados = array(
     "SE" => array("Aracaju", "Nossa Senhora do Socorro", "Lagarto", "Itabaiana"),
     "TO" => array("Palmas", "Araguaína", "Gurupi", "Porto Nacional")
 );
+<<<<<<< HEAD
 if(! empty($_POST["estado"])){
 echo json_encode($cidadesEstados[$_POST["estado"]]);
 }
 ?>   
+=======
+if(! empty($_POST["estado_nascimento"]));
+?>
+>>>>>>> dc9d82e21d295ddcfd993278910a46e8e904cb53
