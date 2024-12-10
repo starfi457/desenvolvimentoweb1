@@ -29,3 +29,4 @@ $cidadesEstados = array(
     "TO" => array("Palmas", "Araguaína", "Gurupi", "Porto Nacional")
 );
 if(! empty($_POST["estado_nascimento"]));
+?>
