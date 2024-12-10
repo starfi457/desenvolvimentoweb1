@@ -17,35 +17,8 @@ campos.removechild(opt);
 
 }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 function carregaCidades(){
-    var corpo={"Estado":PegaValorEstado()}
+   var formulario=new Formdata(); 
     fetch("http://localhost/SOPHIABINI/Aula04/cidades.php",{method:"POST", headers:{"content_type":"application-json"},body:JSON.stringify(corpo)})
     .then(resposta=>{
     CriaOptionsCidade(resposta);
