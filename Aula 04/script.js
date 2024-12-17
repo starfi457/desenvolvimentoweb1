@@ -1,6 +1,6 @@
 
 function PegaValorEstado(){
-<<<<<<< HEAD
+ HEAD
     var selectEstado=document.getElementById("estado_nascimento");
     return selectEstado.options[selectEstado.selectedIndex].value;
     }
@@ -49,10 +49,10 @@ function PegaValorEstado(){
 
 
 
-=======
+
 var selectEstado=document.getElementById("estado_nascimento");
 return selectEstado.options[selectEstado,selectIndex].value;
-}
+
 function CriaOptionsCidade(resposta){
 var selectCidade=document.getElementById("cidade_nascimento");
 LimpaSelect(selectCidade);
@@ -81,4 +81,3 @@ document.addEventListener("DOMContent",()=>{
 var selectEstado=document.getElementsByID("estado_nascimento");
 selectEstado.addEventListener("change",carregaCidades);
 });
->>>>>>> dc9d82e21d295ddcfd993278910a46e8e904cb53
