@@ -89,8 +89,16 @@ function filtro($teste)
 $pessoasFiltradas = array_filter($pessoas, "filtro");
 
 echo "Resultado:"; 
+
+if (empty ($pessoasFiltradas)){
+echo "<br/> Não encontrado";
+}
+else {
 foreach ($pessoasFiltradas as $item)
 {
     echo "<br />Pessoa: " . implode(' :: ', $item);
 }
+}
+
+
 ?>
