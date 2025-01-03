@@ -67,14 +67,30 @@ function calculaIdade(string $dataNascimento): int {
     $idade = floor((((($hoje - $nascimento) / 60) / 60) / 24) / 365.25);
     return $idade;
 }
+function filtro($teste)
+{
+    $resultado = true;
+    if(!empty($_POST['estado_nascimento'])){
+        $resultado = $teste["estado"]==$_POST['estado_nascimento'];
+    };
+    if(!empty($_POST['cidade_nascimento'])){
+        $resultado = $resultado && ($teste["cidade"]==$_POST['cidade_nascimento']);
+    };
+    if(!empty($_POST['nome'])){
+        $resultado = $resultado && (stripos($teste["nome"],$_POST["nome"])>-1);
+    };
+    if(!empty($_POST['idade'])){
 
-$pessoasFiltradas= array_filter($pessoas,function($pessoa,$indice) {
-$idade=calculaIdade($pessoa['dtNascimento']);
-if(((! empty($_GET["nome"])))&&stripos($pessoa["nome"],$_GET["nome"])>-1&&(! empty($_GET["idade"]))&&(! empty($_GET["cidade_nascimento"]))&&
-(!empty($_GET['estado_nascimento']))){
-return true;
+        $resultado = $resultado && (calculaIdade($teste["dtNascimento"])==$_POST['idade']);
+    };    
+    return $resultado;
 }
-else{return false;}
 
-},ARRAY_FILTER_USE_BOTH);
+$pessoasFiltradas = array_filter($pessoas, "filtro");
+
+echo "Resultado:"; 
+foreach ($pessoasFiltradas as $item)
+{
+    echo "<br />Pessoa: " . implode(' :: ', $item);
+}
 ?>
