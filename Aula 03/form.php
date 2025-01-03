@@ -28,7 +28,7 @@ function criaTextoNumero($chave, $valor)
 {
     echo "<div class='itemWrapper'>\n";
     echo "<label for='" . $valor['id'] . "'>" . $valor['label'] . ": </label>\n";
-    echo "<input type='" . $valor['tipo'] . "' id='" . $chave . "' placeholder='" . $valor['placeholder'] . "'></input>\n";
+    echo "<input type='" . $valor['tipo'] . "' id='" . $chave . "' name='".$chave."' placeholder='" . $valor['placeholder'] . "'></input>\n";
     echo "</div>\n";
 }
 function criaTextarea($chave, $valor)
